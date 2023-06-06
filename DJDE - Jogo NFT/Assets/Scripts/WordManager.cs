@@ -22,6 +22,8 @@ public class WordManager : MonoBehaviour
     int wordIndex;
     private bool GameBlocked = false;
 
+    public GameObject derrota;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +61,10 @@ public class WordManager : MonoBehaviour
             // Palavra inválida, adicione aqui o código para lidar com isso (bloquear o jogo, exibir uma mensagem de erro, etc.).
             Debug.Log("Palavra inválida!");
             GameBlocked = true;
+        }
+
+        else{
+            GameBlocked = false;
         }
     }
 }
@@ -125,9 +131,10 @@ public void BackSpace()
             tentativa += 1;
             Debug.Log("tentativa numero: " + tentativa + " de 6");
             Debug.Log("Você errou a palavra!");
-            if (tentativa == 6)
+            if (tentativa >= 6)
             {
                 Debug.Log("Perdeu!");
+                derrota.SetActive(true);
             }
         }
 
@@ -218,9 +225,12 @@ private void ProcessWord(string word)
         tentativa += 1;
         Debug.Log("tentativa numero: " + tentativa + " de 6");
         Debug.Log("Você errou a palavra!");
-        if (tentativa == 6)
+        if (tentativa ==6)
         {
+            derrota.SetActive(true);
             Debug.Log("Perdeu!");
+            
+            
         }
     }
 }
