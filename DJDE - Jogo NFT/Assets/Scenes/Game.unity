@@ -311,11 +311,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 888ee1c512a828e4d842a241a87eaead, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 834375cf76a7fa74195f7b91561aa2d0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.19
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7442,12 +7442,10 @@ MonoBehaviour:
   - SENSO
   - ALGOZ
   - AFETO
-  - ETICA
   - PLENA
   - FAZER
   - SUTIL
   - VIGOR
-  - POREM
   - AUDAZ
   - SANAR
   - FOSSE
@@ -7462,29 +7460,23 @@ MonoBehaviour:
   - TORPE
   - HONRO
   - HONRA
-  - FUTIL
   - SONHO
-  - RAZAO
   - ETNIA
   - ANEXO
-  - ICONE
   - AMIGO
   - LAPSO
   - EXPOR
   - HAVER
   - CASAL
   - DENGO
-  - HABIL
   - TEMPO
   - SEARA
-  - ENTAO
   - GENRO
   - CAUSA
   - POSSE
   - COSER
   - DIZER
   - SABER
-  - OBICE
   - DEVER
   - BRADO
   - BARDO
@@ -7499,7 +7491,6 @@ MonoBehaviour:
   - MUNDO
   - ESTAR
   - CENSO
-  - FULGAZ
   - FORTE
   - VALHA
   - VULGO
