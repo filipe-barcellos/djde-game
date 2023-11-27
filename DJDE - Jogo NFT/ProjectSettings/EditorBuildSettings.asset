@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/ThemeSelector.unity
+    guid: c4b0ff651da89214eb1ff55e9001192c
+  - enabled: 1
+    path: Assets/Scenes/DarkModeGame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LightModeGame.unity
+    guid: 205366017cf5cd34f93c5ace422bf261
   m_configObjects: {}

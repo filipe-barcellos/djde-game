@@ -23,7 +23,11 @@ public class WordManager : MonoBehaviour
     private bool GameBlocked = false;
 
     public GameObject derrota;
-
+    public GameObject vitoria;
+    public AudioSource audioSourceDerrota;
+    public AudioSource audioSourceVitoria;
+    public AudioSource audioSourceErro;
+    public AudioSource audioSourcePalavraNaoExistente;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +64,7 @@ public class WordManager : MonoBehaviour
         {
             // Palavra inválida, adicione aqui o código para lidar com isso (bloquear o jogo, exibir uma mensagem de erro, etc.).
             Debug.Log("Palavra inválida!");
+            audioSourcePalavraNaoExistente.Play();
             GameBlocked = true;
         }
 
@@ -125,16 +130,20 @@ public void BackSpace()
         if (wordIsCorrect)
         {
             Debug.Log("Você acertou a palavra!");
+            vitoria.SetActive(true);
+            audioSourceVitoria.Play();
         }
         else
         {
             tentativa += 1;
             Debug.Log("tentativa numero: " + tentativa + " de 6");
             Debug.Log("Você errou a palavra!");
+            audioSourceErro.Play();
             if (tentativa >= 6)
             {
                 Debug.Log("Perdeu!");
                 derrota.SetActive(true);
+                audioSourceDerrota.Play();
             }
         }
 
@@ -219,6 +228,8 @@ private void ProcessWord(string word)
     if (wordIsCorrect)
     {
         Debug.Log("Você acertou a palavra!");
+        vitoria.SetActive(true);
+        audioSourceVitoria.Play();
     }
     else
     {
@@ -228,6 +239,7 @@ private void ProcessWord(string word)
         if (tentativa ==6)
         {
             derrota.SetActive(true);
+            audioSourceDerrota.Play();
             Debug.Log("Perdeu!");
             
             
